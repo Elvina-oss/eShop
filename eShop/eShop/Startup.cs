@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eShop.Data.Services;
 
 namespace eShop
 {
@@ -28,6 +29,8 @@ namespace eShop
             //DbContext configuration
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString
                 ("DefaultConnectionString")));
+            //Service configuration
+            services.AddScoped<IBrandsService, BrandService>();
             services.AddControllersWithViews();
         }
 

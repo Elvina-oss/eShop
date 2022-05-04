@@ -1,4 +1,6 @@
 ﻿using eShop.Data;
+using eShop.Models;
+using eShop.Data.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,15 +12,40 @@ namespace eShop.Controllers
 {
     public class BrandsController : Controller
     {
-        private readonly AppDbContext _context;
-        public BrandsController(AppDbContext context)
+        private readonly IBrandsService _service;
+        public BrandsController(IBrandsService service)
         {
-            _context = context;
+            _service = service;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var allBrands = _context.Brands.ToList();
+            var allBrands =  await _service.GetAllAsync();
+            return View(allBrands);
+        }
+
+        public async Task<IActionResult> Create()
+        {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("BrandPictureURL,BrandName,Description")] Brand brand)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(brand);
+            }
+            await _service.AddAsync(brand);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var brandDetails = await _service.GetByIdAsync(id);
+            if (brandDetails == null)
+                return View("Empty");
+            return View(brandDetails);
         }
     }
 }
+ 

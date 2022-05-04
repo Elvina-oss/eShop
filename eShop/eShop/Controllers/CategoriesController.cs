@@ -18,7 +18,7 @@ namespace eShop.Controllers
         public async Task<IActionResult> Index()
         {
             var allCategories = await _context.Categories.ToListAsync();
-            return View();
+            return View(allCategories);
         }
     }
 }

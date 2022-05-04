@@ -1,0 +1,58 @@
+﻿@model Brand
+
+@{
+    ViewData["Title"] = "Добавить бренд";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Добавить новый бренд</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group text-center">
+                        <img class="border-info " style="max-width: 150px"  id="BrandPicturePreview" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BrandPictureURL" class="control-label"></label>
+                        <input asp-for="BrandPictureURL" class="form-control" />
+                        <span asp-validation-for="BrandPictureURL" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BrandName" class="control-label"></label>
+                        <input asp-for="BrandName" class="form-control" />
+                        <span asp-validation-for="BrandName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Создать" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Показать все </a>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+</div>
+
+@section Scripts{ 
+    <script>
+        $(document).ready(function () {
+            var output = document.getElementById("BrandPicturePreview");
+            output.src = $("#BrandPictureURL").val();
+        })
+
+
+        $("#BrandPictureURL").on("change", function () {
+            var output = document.getElementById("BrandPicturePreview");
+            output.src = $(this).val();
+        })
+    </script>
+}

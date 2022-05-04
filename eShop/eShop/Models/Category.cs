@@ -10,6 +10,7 @@ namespace eShop.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "Название категории")]
         public string CategoryName { get; set; }
 
         //Relationships

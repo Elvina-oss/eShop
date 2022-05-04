@@ -120,14 +120,14 @@ namespace eShop.Data
                 if (!context.Category_Perfumes.Any())
                 {
                     
-                    context.Category_Perfumes.AddRange(new List<Category_Perfume>()
-                    {
-                        new Category_Perfume()
-                        {
-                            PerfumeId = 1,
-                            CategoryId = 1
-                        }
-                    });
+                    //context.Category_Perfumes.AddRange(new List<Category_Perfume>()
+                    //{
+                    //    new Category_Perfume()
+                    //    {
+                    //        PerfumeId = 1,
+                    //        CategoryId = 1
+                    //    }
+                    //});
                     context.SaveChanges();
                 }
 

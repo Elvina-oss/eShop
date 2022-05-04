@@ -17,8 +17,8 @@ namespace eShop.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var allPerfumes = await _context.Categories.ToListAsync();
-            return View();
+            var allPerfumes = await _context.Perfumes.Include(n => n.Category_Perfumes).ToListAsync();
+            return View(allPerfumes);
         }
     }
 }

@@ -43,8 +43,47 @@ namespace eShop.Controllers
         {
             var brandDetails = await _service.GetByIdAsync(id);
             if (brandDetails == null)
-                return View("Empty");
+                return View("NotFound");
             return View(brandDetails);
+        }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var brandDetails = await _service.GetByIdAsync(id);
+            if (brandDetails == null)
+                return View("NotFound");
+
+            return View(brandDetails);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,BrandPictureURL,BrandName,Description")] Brand brand)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(brand);
+            }
+            await _service.UpdateAsync(id, brand);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var brandDetails = await _service.GetByIdAsync(id);
+            if (brandDetails == null)
+                return View("NotFound");
+
+            return View(brandDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var brandDetails = await _service.GetByIdAsync(id);
+            if (brandDetails == null)
+                return View("NotFound");
+            await _service.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

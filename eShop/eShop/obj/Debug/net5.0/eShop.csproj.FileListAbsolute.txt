@@ -76,3 +76,7 @@ C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Brands
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Brands\Edit.cshtml.g.cs
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Brands\Delete.cshtml.g.cs
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
+C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Categories\Details.cshtml.g.cs
+C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Categories\Edit.cshtml.g.cs
+C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Categories\Create.cshtml.g.cs
+C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Categories\Delete.cshtml.g.cs

@@ -31,6 +31,7 @@ namespace eShop
                 ("DefaultConnectionString")));
             //Service configuration
             services.AddScoped<IBrandsService, BrandService>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddControllersWithViews();
         }
 

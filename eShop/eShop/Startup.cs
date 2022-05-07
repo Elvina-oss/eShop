@@ -32,6 +32,7 @@ namespace eShop
             //Service configuration
             services.AddScoped<IBrandsService, BrandService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IPerfumesService, PerfumesService>();
             services.AddControllersWithViews();
         }
 

@@ -1,0 +1,82 @@
+﻿@model NewPerfumeVM
+@{
+    ViewData["Title"] = "Добавление нового товара";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>Добавить товар</h4>
+        </p>
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger">
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="PerfumeName"></label>
+                                <input asp-for="PerfumeName" class="form-control" />
+                                <span asp-validation-for="PerfumeName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ReleaseYear"></label>
+                                <input asp-for="ReleaseYear" class="form-control" />
+                                <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Price"></label>
+                                <input asp-for="Price" class="form-control" />
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="PerfumePictureURL"></label>
+                                <input asp-for="PerfumePictureURL" class="form-control" />
+                                <span asp-validation-for="PerfumePictureURL" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="BrandId"></label>
+                                <select asp-for="BrandId" class="form-control" asp-items="ViewBag.Brands"></select>
+                                <span asp-validation-for="BrandId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CategoryIds"></label>
+                                <select asp-for="CategoryIds" class="form-control" asp-items="ViewBag.Categories" multiple></select>
+                                <span asp-validation-for="CategoryIds" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="Description"></label>
+                                <textarea asp-for="Description" class="form-control"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 offset-4 text-center">
+                        <img wirth="100%" id="PicturePreview" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Добавить" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Назад</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $("#PerfumePictureURL").on("change", function () {
+            var output = document.getElementById("PicturePreview");
+            output.src = $(this).val();
+        })
+    </script>
+}

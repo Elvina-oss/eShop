@@ -4,11 +4,16 @@
 @*Define view data*@
 
 @{
-    ViewData["Title"] = "List of Perfumes";
+    ViewData["Title"] = "Супер классная парфюмерия";
 }
 
 @*Write code*@
-
+<style>
+    .truncate {
+        overflow: hidden; /* Обрезаем всё за пределами блока */
+        text-overflow: ellipsis; /* Добавляем многоточие */
+    }
+</style>
 <div class="row">
     @foreach (var item in Model)
     {
@@ -20,10 +25,9 @@
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.PerfumeName
-                                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
-                                    {
-                                        <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
-                                    }
+                                
+                                    <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                   
                                 </h5>
                             </p>
                         </div>
@@ -33,7 +37,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
-                            <p class="card-text">@item.Description</p>
+                            <div class="truncate">
+                                <p class="card-text">@item.Description</p>
+                            </div>
                             <p class="card-text"><b>Название: </b>@item.PerfumeName</p>
                             <p class="card-text"><b>Год выпуска: </b>@item.ReleaseYear</p>
 

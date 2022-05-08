@@ -17,6 +17,31 @@ namespace eShop.Data.Services
             _context = context; 
         }
 
+        public async Task AddNewPerfumeAsync(NewPerfumeVM data)
+        {
+            var newPerfume = new Perfume()
+            {
+                PerfumeName = data.PerfumeName,
+                PerfumePictureURL = data.PerfumePictureURL,
+                ReleaseYear = data.ReleaseYear,
+                Description = data.Description,
+                Price = data.Price,
+                BrandId = data.BrandId
+            };
+            await _context.Perfumes.AddAsync(newPerfume);
+            await _context.SaveChangesAsync();
+            foreach(var categoryId in data.CategoryIds)
+            {
+                var newCategoryPerfume = new Category_Perfume()
+                {
+                    PerfumeId = newPerfume.Id,
+                    CategoryId = categoryId
+                };
+                await _context.Category_Perfumes.AddAsync(newCategoryPerfume);
+            }
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<NewPerfumeDropdownsVM> GetNewPerfumeDropdownsValues()
         {
             var responce = new NewPerfumeDropdownsVM()
@@ -35,6 +60,38 @@ namespace eShop.Data.Services
                 .FirstOrDefaultAsync(n => n.Id == id);
             return perfumeDetails;
 
+        }
+
+        public async Task UpdatePerfumeAsync(NewPerfumeVM data)
+        {
+            var dbPerfume = await _context.Perfumes.FirstOrDefaultAsync(n => n.Id == data.Id);
+            if (dbPerfume != null)
+            {
+
+                dbPerfume.PerfumeName = data.PerfumeName;
+                dbPerfume.PerfumePictureURL = data.PerfumePictureURL;
+                dbPerfume.ReleaseYear = data.ReleaseYear;
+                dbPerfume.Description = data.Description;
+                dbPerfume.Price = data.Price;
+                dbPerfume.BrandId = data.BrandId;
+                
+                await _context.SaveChangesAsync();
+            }
+
+            var existingCategoriesDb = _context.Category_Perfumes.Where(n => n.PerfumeId == data.Id).ToList();
+            _context.Category_Perfumes.RemoveRange(existingCategoriesDb);
+            await _context.SaveChangesAsync();
+
+            foreach (var categoryId in data.CategoryIds)
+            {
+                var newCategoryPerfume = new Category_Perfume()
+                {
+                    PerfumeId = data.Id,
+                    CategoryId = categoryId
+                };
+                await _context.Category_Perfumes.AddAsync(newCategoryPerfume);
+            }
+            await _context.SaveChangesAsync();
         }
     }
 }

@@ -11,6 +11,7 @@ namespace eShop.Models
 {
     public class NewPerfumeVM
     {
+        public int Id { get; set; }
         [Display(Name = "Фото")]
         [Required(ErrorMessage ="Необходима фотография")]
         public string PerfumePictureURL { get; set; }

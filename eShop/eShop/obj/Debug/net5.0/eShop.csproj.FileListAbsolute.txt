@@ -83,3 +83,4 @@ C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Catego
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Perfumes\Details.cshtml.g.cs
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Perfumes\Create.cshtml.g.cs
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Shared\_CreateItem.cshtml.g.cs
+C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Perfumes\Edit.cshtml.g.cs

@@ -12,5 +12,7 @@ namespace eShop.Data.Services
     {
         Task<Perfume> GetPerfumeByIdAsync(int id);
         Task<NewPerfumeDropdownsVM> GetNewPerfumeDropdownsValues();
+        Task AddNewPerfumeAsync(NewPerfumeVM data);
+        Task UpdatePerfumeAsync(NewPerfumeVM data);
     }
 }

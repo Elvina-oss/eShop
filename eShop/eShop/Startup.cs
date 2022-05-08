@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eShop.Data.Services;
+using Microsoft.AspNetCore.Http;
+using eShop.Data.Cart;
 
 namespace eShop
 {
@@ -33,6 +35,11 @@ namespace eShop
             services.AddScoped<IBrandsService, BrandService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IPerfumesService, PerfumesService>();
+            services.AddScoped<IOrdersService, OrdersService>();
+            
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
+            services.AddSession();
             services.AddControllersWithViews();
         }
 
@@ -53,6 +60,7 @@ namespace eShop
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthorization();
 

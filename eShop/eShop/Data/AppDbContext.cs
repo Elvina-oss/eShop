@@ -31,5 +31,9 @@ namespace eShop.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category_Perfume> Category_Perfumes { get; set; }
         public DbSet<Perfume> Perfumes { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

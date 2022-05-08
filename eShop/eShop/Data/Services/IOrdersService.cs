@@ -9,6 +9,6 @@ namespace eShop.Data.Services
     public interface IOrdersService
     {
         Task StoreOrderAsync(List<ShoppingCartItem> item, string userId, string userEmailAdress);
-        Task<List<Order>> GetOrderByUserIdAsync(string);
+        Task<List<Order>> GetOrderByUserIdAsync(string userId);
     }
 }

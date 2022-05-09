@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 using eShop.Data.Services;
 using Microsoft.AspNetCore.Http;
 using eShop.Data.Cart;
+using eShop.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace eShop
 {
@@ -39,7 +42,16 @@ namespace eShop
             
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
+
+            //Аунтефикация и авторизация
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddMemoryCache();
+
             services.AddSession();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            });
             services.AddControllersWithViews();
         }
 
@@ -61,7 +73,9 @@ namespace eShop
 
             app.UseRouting();
             app.UseSession();
-
+            //Аунтефикация и авторизация
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -72,6 +86,7 @@ namespace eShop
             });
             //Seed DB
             AppDbInitializer.Seed(app);
+            AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
         }
     }
 }

@@ -69,5 +69,11 @@ namespace eShop.Controllers
             return View("OrderCompleted");
         }
 
+        public IActionResult Pay()
+        {
+            
+            return View("Payment");
+        }
+
     }
 }

@@ -198,3 +198,4 @@ C:\Users\User\source\repos\ehoptryafterfail\eShop\eShop\obj\Debug\net5.0\eShop.R
 C:\Users\User\source\repos\ehoptryafterfail\eShop\eShop\obj\Debug\net5.0\eShop.Views.pdb
 C:\Users\User\source\repos\ehoptryafterfail\eShop\eShop\obj\Debug\net5.0\eShop.csproj.CopyComplete
 C:\Users\User\source\repos\ehoptryafterfail\eShop\eShop\obj\Debug\net5.0\eShop.genruntimeconfig.cache
+C:\Users\User\source\repos\ehoptryafterfail\eShop\eShop\obj\Debug\net5.0\Razor\Views\Account\Users.cshtml.g.cs

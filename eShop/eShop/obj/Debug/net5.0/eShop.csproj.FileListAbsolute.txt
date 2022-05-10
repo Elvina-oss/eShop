@@ -97,3 +97,4 @@ C:\Users\User\source\repos\eShop\eShop\eShop\bin\Debug\net5.0\Microsoft.Extensio
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Account\RegisterCompleted.cshtml.g.cs
+C:\Users\User\source\repos\eShop\eShop\eShop\obj\Debug\net5.0\Razor\Views\Shared\_Identity.cshtml.g.cs

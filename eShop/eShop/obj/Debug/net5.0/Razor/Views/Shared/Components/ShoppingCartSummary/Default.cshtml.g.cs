@@ -14,20 +14,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
-using eShop;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
+using eShop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
 using eShop.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8077264db719b0e2e3719cc803e1197b5bdf1478", @"/Views/Shared/Components/ShoppingCartSummary/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"014467196563d224d226c81ae9437453e806ef53", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2f2452c3164306e8b6a089a6a22ed7b385093e6", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_ShoppingCartSummary_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<int>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("nav-link text-dark"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -66,7 +73,7 @@ using eShop.Models;
 #line hidden
 #nullable disable
             WriteLiteral("                <li class=\"nav-item\">\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8077264db719b0e2e3719cc803e1197b5bdf14784439", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8077264db719b0e2e3719cc803e1197b5bdf14784628", async() => {
                 WriteLiteral("\r\n                        <i class =\"bi bi-cart4\"></i> ");
 #nullable restore
 #line 6 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\Shared\Components\ShoppingCartSummary\Default.cshtml"

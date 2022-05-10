@@ -22,18 +22,21 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Perfumes" asp-action="Index"><i class="bi bi-film"></i> Парфюм</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-gear"></i> Управление
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-controller="Brands" asp-action="Index"><i class="bi bi-camera-reels"></i> Бренды</a>
+                                    <a class="dropdown-item" asp-controller="Categories" asp-action="Index"><i class="bi bi-headset"></i> Категории</a>
+                                </div>
+                            </li>
+                        }
 
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bi bi-gear"></i> Управление
-                            </a>
-
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" asp-controller="Brands" asp-action="Index"><i class="bi bi-camera-reels"></i> Бренды</a>
-                                <a class="dropdown-item" asp-controller="Categories" asp-action="Index"><i class="bi bi-headset"></i> Категории</a>
-                            </div>
-                        </li>
 
 
                     </ul>

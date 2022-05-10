@@ -14,13 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
-using eShop;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
+using eShop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
 using eShop.Models;
 
 #line default
@@ -34,7 +41,7 @@ using eShop.Data.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d90eacfb5ae9e529385e4d58987199c34259152", @"/Views/Orders/ShoppingCart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"014467196563d224d226c81ae9437453e806ef53", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2f2452c3164306e8b6a089a6a22ed7b385093e6", @"/Views/_ViewImports.cshtml")]
     public class Views_Orders_ShoppingCart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ShoppingCartVM>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("text-danger"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -139,7 +146,7 @@ using eShop.Data.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                    <td class=\"align-middle\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c342591528927", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c342591529116", async() => {
                 WriteLiteral("\r\n                            <i class=\"bi bi-cart-dash\"></i>\r\n                        ");
             }
             );
@@ -173,7 +180,7 @@ using eShop.Data.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c3425915211472", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c3425915211661", async() => {
                 WriteLiteral("\r\n                            <i class=\"bi bi-cart-plus\"></i>\r\n                        ");
             }
             );
@@ -224,7 +231,7 @@ using eShop.Data.ViewModels;
 #nullable disable
             WriteLiteral("</td>\r\n                </tr>\r\n            </tfoot>\r\n        </table>\r\n        <div class=\"text-right\">\r\n            <div class=\"btn-group\">\r\n");
             WriteLiteral("                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c3425915214932", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c3425915215121", async() => {
                 WriteLiteral("\r\n                    Оформить заказ\r\n                ");
             }
             );
@@ -241,7 +248,7 @@ using eShop.Data.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c3425915216239", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d90eacfb5ae9e529385e4d58987199c3425915216428", async() => {
                 WriteLiteral("\r\n                    На главную\r\n                ");
             }
             );

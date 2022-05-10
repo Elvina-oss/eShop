@@ -14,20 +14,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
-using eShop;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
+using eShop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\_ViewImports.cshtml"
 using eShop.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a69695015bc1d1823c5f38e2b1812cf30acc2de6", @"/Views/Perfumes/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"014467196563d224d226c81ae9437453e806ef53", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2f2452c3164306e8b6a089a6a22ed7b385093e6", @"/Views/_ViewImports.cshtml")]
     public class Views_Perfumes_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Perfume>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Perfumes", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -120,7 +127,7 @@ WriteAttributeValue("", 817, Model.PerfumeName, 817, 18, false);
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                        <p class=\"card-text\"><b>Название: </b>\r\n                        <p class=\"card-text\"><b>Бренд: </b>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a69695015bc1d1823c5f38e2b1812cf30acc2de68165", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a69695015bc1d1823c5f38e2b1812cf30acc2de68354", async() => {
                 WriteLiteral("\r\n                                ");
 #nullable restore
 #line 36 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\Perfumes\Details.cshtml"
@@ -203,7 +210,7 @@ WriteAttributeValue("", 1972, category.CategoryId, 1972, 20, false);
                     <div class=""card-footer "">
                         <p class=""card-text"">
                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a69695015bc1d1823c5f38e2b1812cf30acc2de612767", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a69695015bc1d1823c5f38e2b1812cf30acc2de612956", async() => {
                 WriteLiteral("\r\n                                <i class=\"bi bi-eye-fill\"></i> Назад\r\n                            ");
             }
             );
@@ -220,7 +227,7 @@ WriteAttributeValue("", 1972, category.CategoryId, 1972, 20, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a69695015bc1d1823c5f38e2b1812cf30acc2de614134", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a69695015bc1d1823c5f38e2b1812cf30acc2de614323", async() => {
                 WriteLiteral("\r\n                                <i class=\"bi bi-cart-plus\"></i> Добавить в корзину (Цена ");
 #nullable restore
 #line 66 "C:\Users\User\source\repos\eShop\eShop\eShop\Views\Perfumes\Details.cshtml"

@@ -19,7 +19,10 @@
                   
 
                     <div class="form-group">
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
                         <a class="btn btn-outline-success float-right" asp-action="Редактировать" asp-route-id="@Model.Id"></a>
+                    }
                         <a class="btn btn-outline-secondary" asp-action="Index">Показать все </a>
                     </div>
 

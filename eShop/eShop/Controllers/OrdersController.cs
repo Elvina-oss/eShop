@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace eShop.Controllers
@@ -23,8 +24,9 @@ namespace eShop.Controllers
 
         public async Task<IActionResult> Index()
         {
-            string userId = "";
-            var orders = await _ordersService.GetOrderByUserIdAsync(userId);
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userRole = User.FindFirstValue(ClaimTypes.Role);
+            var orders = await _ordersService.GetOrderByUserIdAndRoleAsync(userId, userRole);
             return View(orders);
         }
 
@@ -42,7 +44,7 @@ namespace eShop.Controllers
         {
             var item = await _perfumesService.GetPerfumeByIdAsync(id);
             if (item != null)
-            {   
+            {
                 _shoppingCart.AddItemToCart(item);
             }
             return RedirectToAction(nameof(ShoppingCart));
@@ -61,8 +63,8 @@ namespace eShop.Controllers
         public async Task<IActionResult> CompleteOrder()
         {
             var items = _shoppingCart.GetShoppingCartItems();
-            string userId = "";
-            string userEmailAdress = "";
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userEmailAdress = User.FindFirstValue(ClaimTypes.Email);
 
             await _ordersService.StoreOrderAsync(items, userId, userEmailAdress);
             await _shoppingCart.ClearShoppingCartAsync();
@@ -71,7 +73,7 @@ namespace eShop.Controllers
 
         public IActionResult Pay()
         {
-            
+
             return View("Payment");
         }
 

@@ -5910,11 +5910,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\eShop\\eShop\\eShop\\eShop.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ehoptryafterfail\\eShop\\eShop\\eShop.csproj",
       "projectName": "eShop",
-      "projectPath": "C:\\Users\\User\\source\\repos\\eShop\\eShop\\eShop\\eShop.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\ehoptryafterfail\\eShop\\eShop\\eShop.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\eShop\\eShop\\eShop\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\ehoptryafterfail\\eShop\\eShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
